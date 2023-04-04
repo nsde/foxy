@@ -1,6 +1,6 @@
 {% include 'components/top.html' %}
 <main class="builder">
-    <section class="sidebar">
+    <section class="sidebar" id="sidebar">
         {% for category in brick_categories %}
         <h2>{{ category.name }}</h2>
         {% for brick in category.bricks_html %}
@@ -9,6 +9,9 @@
         {% endfor %}
     </section>
     <section class="workspace">
+        <div class="container" id="workspace">
+            <p>Hello</p>
+        </div>
     </section>
 </main>
 <script src='https://bevacqua.github.io/dragula/dist/dragula.js'></script>

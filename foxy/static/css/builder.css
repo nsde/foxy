@@ -8,4 +8,7 @@ main.builder {
 section.workspace {
   margin-left: 400px;
   padding: 2rem;
+}
+section.workspace div.container {
+  height: 90vh;
 }/*# sourceMappingURL=builder.css.map */

@@ -2,11 +2,14 @@ div.brick {
   font-weight: 500;
   margin-bottom: 1rem;
   transition: transform 0.1s;
-  cursor: pointer;
+  cursor: grab;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3647058824);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 div.brick.blue {
   background: #2e48bc;
@@ -34,12 +37,18 @@ div.brick.active {
 div.brick input {
   margin-left: 5px;
   font-size: 14px;
-  -webkit-user-select: inset;
-     -moz-user-select: inset;
-          user-select: inset;
   width: 200px;
   border: none;
   padding: 5px;
   background: rgba(52, 53, 56, 0.3647058824);
   outline: 5px;
+}
+div.brick.gu-transit {
+  opacity: 0.5;
+  cursor: grab;
+}
+div.brick.gu-mirror {
+  cursor: grab;
+  z-index: 1000;
+  opacity: 0.8;
 }/*# sourceMappingURL=brick.css.map */

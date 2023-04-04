@@ -4,10 +4,11 @@ div.brick
     font-weight: 500
     margin-bottom: 1rem
     transition: transform 0.1s
-    cursor: pointer
+    cursor: grab
     width: fit-content
     padding: 1rem
     box-shadow: 5px 5px 15px $shadow
+    user-select: none
 
     &.blue
         background: $blue
@@ -30,9 +31,17 @@ div.brick
     input
         margin-left: 5px
         font-size: 14px
-        user-select: inset
         width: 200px
         border: none
         padding: 5px
         background: $bg-light
         outline: 5px
+
+    &.gu-transit
+        opacity: 0.5
+        cursor: grab
+
+    &.gu-mirror
+        cursor: grab
+        z-index: 1000
+        opacity: 0.8

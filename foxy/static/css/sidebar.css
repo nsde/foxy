@@ -11,17 +11,6 @@ section.sidebar {
   scrollbar-width: thin;
   border-right: 1px solid rgba(255, 255, 255, 0.1568627451);
 }
-section.sidebar ::scrollbar {
-  width: 15px;
-  height: 15px;
-}
-section.sidebar ::scrollbar-track-piece {
-  background-color: #C2D2E4;
-}
-section.sidebar ::scrollbar-thumb:vertical {
-  height: 30px;
-  background-color: #0A4C95;
-}
 section.sidebar h2 {
   margin-top: 0;
   font-size: 1.5rem;
