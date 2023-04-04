@@ -1,9 +1,25 @@
-// make all .brick elements draggable using plain js
-
 const bricks = document.querySelectorAll('.brick');
 
 bricks.forEach((brick) => {
-    // add the draggable attribute to each brick
+    
+});
+
+// Remove brick on Delete key pressed
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Delete') {
+        const brick = document.querySelector('.brick:hover');
+        if (brick) { brick.classList.add('remove'); }
+    }
+});
+
+document.addEventListener('keyup', (event) => {
+    if (event.key === 'Delete') {
+        // remove every brick with class remove
+        const bricks = document.querySelectorAll('.brick.remove');
+        bricks.forEach((brick) => {
+            brick.remove();
+        });
+    }
 });
 
 'use strict';
@@ -15,6 +31,6 @@ dragula([$('sidebar'), $('workspace')], {
     return source === $('sidebar');
   },
   accepts: function (el, target) {
-    return target !== $('sidebar');
+    return target !== $('sidebar') && el.classList.contains('brick');
   }
 });

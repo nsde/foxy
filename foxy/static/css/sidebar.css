@@ -15,9 +15,4 @@ section.sidebar h2 {
   margin-top: 0;
   font-size: 1.5rem;
   font-weight: 500;
-}
-section.sidebar * {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }/*# sourceMappingURL=sidebar.css.map */

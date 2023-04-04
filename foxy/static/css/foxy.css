@@ -1,5 +1,7 @@
 html {
   background: #19191b;
+  scrollbar-color: rgba(255, 255, 255, 0.1568627451) #19191b;
+  scrollbar-width: thin;
 }
 html * {
   color: #ece4e4;
@@ -9,4 +11,5 @@ html * {
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }/*# sourceMappingURL=foxy.css.map */

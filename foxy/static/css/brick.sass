@@ -23,10 +23,8 @@ div.brick
     &.yellow
         background: $yellow
 
-    &.active
-        cursor: grabbing
-        opacity: 0.8
-        transform: scale(0.95)
+    &:hover
+        opacity: 0.9
 
     input
         margin-left: 5px
@@ -38,10 +36,13 @@ div.brick
         outline: 5px
 
     &.gu-transit
-        opacity: 0.5
-        cursor: grab
+        opacity: 0.8
+        box-shadow: 0 0 15px $dot
+        transform: scale(0.97)
 
     &.gu-mirror
-        cursor: grab
-        z-index: 1000
         opacity: 0.8
+        cursor: grabbing
+
+    &.remove
+        background: $red

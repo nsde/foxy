@@ -29,10 +29,8 @@ div.brick.orange {
 div.brick.yellow {
   background: #7a560e;
 }
-div.brick.active {
-  cursor: grabbing;
-  opacity: 0.8;
-  transform: scale(0.95);
+div.brick:hover {
+  opacity: 0.9;
 }
 div.brick input {
   margin-left: 5px;
@@ -44,11 +42,14 @@ div.brick input {
   outline: 5px;
 }
 div.brick.gu-transit {
-  opacity: 0.5;
-  cursor: grab;
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1568627451);
+  transform: scale(0.97);
 }
 div.brick.gu-mirror {
-  cursor: grab;
-  z-index: 1000;
   opacity: 0.8;
+  cursor: grabbing;
+}
+div.brick.remove {
+  background: #7a0e0e;
 }/*# sourceMappingURL=brick.css.map */
