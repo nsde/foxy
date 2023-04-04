@@ -9,13 +9,24 @@
         {% endfor %}
     </section>
     <section class="workspace">
+        <p>To get started, drag blocks from the sidebar in here. It's as simple as <i>Scratch</i>!</p>
+        <p>Remove blocks by pressing the <kbd>Delete</kbd> key.</p>
+        <p>Run the program by pressing <kbd>Ctrl+Enter</kbd> or by clicking the button next to <i>Preview</i>.</p>
+        <p>Your project is saved automatically, but make sure to enable cookies!</p>
         <div class="container" id="workspace">
-            <p>To get started, drag blocks from the sidebar in here. It's as simple as <i>Scratch</i>!</p>
-            <p>Remove blocks by pressing the <kbd>Delete</kbd> key.</p>
         </div>
+    </section>
+    <section class="preview">
+        <h2>
+            Preview
+            <button class="run" id="run" onclick="runProject()">Run</button>
+        </h2>
+        <iframe id="preview"></iframe>
     </section>
 </main>
 <script src='https://bevacqua.github.io/dragula/dist/dragula.js'></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.6.3/interact.min.js" integrity="sha512-dBfDtcy8RjOXoxI488NhccLH4w7IjvzO55K+Y88HmxBzS0m7zMnMLAZZntpa3Xmhv6ScbXoXURmdgl8tEDCF6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script src="/static/js/cookies.js"></script>
+<script src="/static/js/project.js"></script>
 <script src="/static/js/builder.js"></script>
 {% include 'components/end.html' %}

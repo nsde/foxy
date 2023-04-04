@@ -18,13 +18,13 @@ div.brick.teal {
   background: #1e798b;
 }
 div.brick.purple {
-  background: #9e3a97;
+  background: #6c3a9e;
 }
 div.brick.green {
   background: #338b21;
 }
 div.brick.orange {
-  background: #92521a;
+  background: #92421a;
 }
 div.brick.yellow {
   background: #7a560e;
@@ -42,9 +42,8 @@ div.brick input {
   outline: 5px;
 }
 div.brick.gu-transit {
-  opacity: 0.8;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1568627451);
-  transform: scale(0.97);
+  transform: scale(1.03);
+  filter: brightness(1.1);
 }
 div.brick.gu-mirror {
   opacity: 0.8;

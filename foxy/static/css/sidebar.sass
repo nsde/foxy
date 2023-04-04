@@ -1,17 +1,19 @@
 @import '_vars'
 
 section.sidebar
-    padding: 1rem
-    position: fixed
     top: 0
     left: 0
     width: 400px
     height: 100vh
+    z-index: 500
+    padding: 1rem
+    position: fixed
     background: $bg-light
     overflow-y: auto
     scrollbar-color: $dot $bg
     scrollbar-width: thin
     border-right: 1px solid $dot
+    backdrop-filter: blur(5px)
 
     h2
         margin-top: 0

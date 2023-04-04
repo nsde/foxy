@@ -8,8 +8,12 @@ bricks.forEach((brick) => {
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Delete') {
         const brick = document.querySelector('.brick:hover');
-        if (brick) { brick.classList.add('remove'); }
+        if (brick) {
+            brick.classList.add('remove');
+            saveProject();
+        }
     }
+
 });
 
 document.addEventListener('keyup', (event) => {
@@ -18,6 +22,7 @@ document.addEventListener('keyup', (event) => {
         const bricks = document.querySelectorAll('.brick.remove');
         bricks.forEach((brick) => {
             brick.remove();
+            saveProject();
         });
     }
 });
@@ -26,11 +31,14 @@ document.addEventListener('keyup', (event) => {
 
 $ = function (id) { return document.getElementById(id); };
 
+
 dragula([$('sidebar'), $('workspace')], {
-  copy: function (el, source) {
-    return source === $('sidebar');
-  },
-  accepts: function (el, target) {
-    return target !== $('sidebar') && el.classList.contains('brick');
-  }
+    copy: function (el, source) {
+        return source === $('sidebar') && el.classList.contains('brick');
+    },
+    accepts: function (el, target) {
+        return target !== $('sidebar') && el.classList.contains('brick');
+    }
+}).on('drop', function (el, target, source, sibling) {
+    saveProject();
 });

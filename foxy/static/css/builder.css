@@ -1,8 +1,8 @@
 main.builder {
   background: linear-gradient(90deg, #19191b 29px, transparent 1%) center, linear-gradient(#19191b 29px, transparent 1%) center, rgba(255, 255, 255, 0.1568627451);
   background-size: 30px 30px;
-  height: 100vh;
-  width: 100vw;
+  height: 150vh;
+  width: 150vw;
 }
 
 section.workspace {
@@ -11,4 +11,16 @@ section.workspace {
 }
 section.workspace div.container {
   height: 90vh;
+}
+section.workspace div.container div.brick {
+  margin-bottom: 0;
+}
+section.workspace div.container p {
+  margin-top: 0;
+  opacity: 0.8;
+}
+
+kbd {
+  padding: 4px 7px;
+  background: rgba(255, 255, 255, 0.1568627451);
 }/*# sourceMappingURL=builder.css.map */

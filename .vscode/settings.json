@@ -14,7 +14,10 @@
         "foxy/static/css/sidebar.css": true,
         "foxy/static/css/sidebar.css.map": true,
         "foxy/static/css/brick.css": true,
-        "foxy/static/css/brick.css.map": true
+        "foxy/static/css/brick.css.map": true,
+        "foxy/static/css/preview.css": true,
+        "foxy/static/css/preview.css.map": true,
+        "foxy/__pycache__": true
     },
     "hide-files.files": [
         ".vscode",
@@ -25,6 +28,9 @@
         "foxy/static/css/sidebar.css",
         "foxy/static/css/sidebar.css.map",
         "foxy/static/css/brick.css",
-        "foxy/static/css/brick.css.map"
+        "foxy/static/css/brick.css.map",
+        "foxy/static/css/preview.css",
+        "foxy/static/css/preview.css.map",
+        "foxy/__pycache__"
     ]
 }

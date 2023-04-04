@@ -1,0 +1,40 @@
+@import '_vars'
+
+section.preview
+    top: 0
+    right: 0
+    width: 400px
+    height: 100vh
+    z-index: 500
+    padding: 1rem
+    position: fixed
+    background: $bg-light
+    border-left: 1px solid $dot
+    backdrop-filter: blur(5px)
+
+    h2
+        margin-top: 0
+        font-size: 1.5rem
+        font-weight: 500
+
+
+    button
+        float: right
+        cursor: pointer
+        font-size: 16px
+        border: none
+        padding: 0.5rem
+        background: $green
+
+        &:hover
+            opacity: 0.9
+
+    iframe
+        width: 100%
+        height: 300px
+        border: 1px solid $dot
+
+svg.loading
+    width: 40px
+    height: 40px
+    filter: invert(1)

@@ -1,43 +1,45 @@
+"""The main application module."""
+
+import json
+
 import flask
 
+import bricks
+
 app = flask.Flask(__name__)
-
-BRICK_CATEGORIES = [
-    {
-        'name': 'Functions',
-        'color': 'blue',
-        'bricks': ['Ask for <query>', 'Respond with <response>']
-    },
-    {
-        'name': 'Controls',
-        'color': 'yellow',
-        'bricks': ['If <condition>', 'Else', 'End If', 'While <condition>', 'End While', 'Repeat <times>', 'End Repeat']
-    },
-    {
-        'name': 'Data',
-        'color': 'orange',
-        'bricks': ['Run JavaScript <code>', 'Run Python <code>']
-    },
-    {
-        'name': 'Tools',
-        'color': 'purple',
-        'bricks': ['Set engine to <engine>']
-    }
-]
-
-for category in BRICK_CATEGORIES:
-    category['bricks_html'] = []
-
-    for brick in category['bricks']:
-        category['bricks_html'].append(
-            brick\
-                .replace('<', '<input type="text" placeholder="')\
-                .replace('>', '">')
-        )
 
 @app.route('/')
 def index():
     """Return the home page."""
-    return flask.render_template('index.html', brick_categories=BRICK_CATEGORIES)
+    return flask.render_template('index.html', brick_categories=bricks.BRICK_CATEGORIES)
+
+def get_project(request):
+    code = request.cookies.get('project')
+    if not code:
+        code = request.args.get('project')
+
+    return code
+
+@app.route('/api/save', methods=['POST'])
+def save():
+    """Save the current project."""
+    code = get_project(flask.request)
+    body = flask.request.get_json()
+
+    with open(f'saves/{code}.json'.format(code), 'w', encoding='utf-8') as save_file:
+        json.dump(body, save_file)
+
+    return code
+
+@app.route('/api/load')
+def load():
+    """Load a project."""
+    code = get_project(flask.request)
+
+    try:
+        with open(f'saves/{code}.json'.format(code), 'r', encoding='utf-8') as save_file:
+            return json.load(save_file)
+    except FileNotFoundError:
+        return flask.Response(status=404)
 
 app.run(port=2050, debug=True)
