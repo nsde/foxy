@@ -1,0 +1,11 @@
+main.builder {
+  background: linear-gradient(90deg, #19191b 29px, transparent 1%) center, linear-gradient(#19191b 29px, transparent 1%) center, rgba(255, 255, 255, 0.1568627451);
+  background-size: 30px 30px;
+  height: 100vh;
+  width: 100vw;
+}
+
+section.workspace {
+  margin-left: 400px;
+  padding: 2rem;
+}/*# sourceMappingURL=builder.css.map */

@@ -1,0 +1,38 @@
+@import '_vars'
+
+div.brick
+    font-weight: 500
+    margin-bottom: 1rem
+    transition: transform 0.1s
+    cursor: pointer
+    width: fit-content
+    padding: 1rem
+    box-shadow: 5px 5px 15px $shadow
+
+    &.blue
+        background: $blue
+    &.teal
+        background: $teal
+    &.purple
+        background: $purple
+    &.green
+        background: $green
+    &.orange
+        background: $orange
+    &.yellow
+        background: $yellow
+
+    &.active
+        cursor: grabbing
+        opacity: 0.8
+        transform: scale(0.95)
+
+    input
+        margin-left: 5px
+        font-size: 14px
+        user-select: inset
+        width: 200px
+        border: none
+        padding: 5px
+        background: $bg-light
+        outline: 5px

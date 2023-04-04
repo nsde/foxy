@@ -1,0 +1,30 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".vscode": true,
+        "foxy/static/css/foxy.css": true,
+        "foxy/static/css/foxy.css.map": true,
+        "foxy/static/css/builder.css.map": true,
+        "foxy/static/css/builder.css": true,
+        "foxy/static/css/sidebar.css": true,
+        "foxy/static/css/sidebar.css.map": true,
+        "foxy/static/css/brick.css": true,
+        "foxy/static/css/brick.css.map": true
+    },
+    "hide-files.files": [
+        ".vscode",
+        "foxy/static/css/foxy.css",
+        "foxy/static/css/foxy.css.map",
+        "foxy/static/css/builder.css.map",
+        "foxy/static/css/builder.css",
+        "foxy/static/css/sidebar.css",
+        "foxy/static/css/sidebar.css.map",
+        "foxy/static/css/brick.css",
+        "foxy/static/css/brick.css.map"
+    ]
+}

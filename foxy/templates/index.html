@@ -1,0 +1,17 @@
+{% include 'components/top.html' %}
+<main class="builder">
+    <section class="sidebar">
+        {% for category in brick_categories %}
+        <h2>{{ category.name }}</h2>
+        {% for brick in category.bricks_html %}
+        <div class="brick {{ category.color }}" fxy-brick-type="{{ brick.id }}">{{ brick | safe }}</div>
+        {% endfor %}
+        {% endfor %}
+    </section>
+    <section class="workspace">
+    </section>
+</main>
+<script src='https://bevacqua.github.io/dragula/dist/dragula.js'></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.6.3/interact.min.js" integrity="sha512-dBfDtcy8RjOXoxI488NhccLH4w7IjvzO55K+Y88HmxBzS0m7zMnMLAZZntpa3Xmhv6ScbXoXURmdgl8tEDCF6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script src="/static/js/builder.js"></script>
+{% include 'components/end.html' %}

@@ -1,0 +1,45 @@
+div.brick {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: transform 0.1s;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3647058824);
+}
+div.brick.blue {
+  background: #2e48bc;
+}
+div.brick.teal {
+  background: #1e798b;
+}
+div.brick.purple {
+  background: #9e3a97;
+}
+div.brick.green {
+  background: #338b21;
+}
+div.brick.orange {
+  background: #92521a;
+}
+div.brick.yellow {
+  background: #7a560e;
+}
+div.brick.active {
+  cursor: grabbing;
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+div.brick input {
+  margin-left: 5px;
+  font-size: 14px;
+  -webkit-user-select: inset;
+     -moz-user-select: inset;
+          user-select: inset;
+  width: 200px;
+  border: none;
+  padding: 5px;
+  background: rgba(52, 53, 56, 0.3647058824);
+  outline: 5px;
+}/*# sourceMappingURL=brick.css.map */

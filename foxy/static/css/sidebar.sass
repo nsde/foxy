@@ -1,0 +1,33 @@
+@import '_vars'
+
+section.sidebar
+    padding: 1rem
+    position: fixed
+    top: 0
+    left: 0
+    width: 400px
+    height: 100vh
+    background: $bg-light
+    overflow-y: auto
+    scrollbar-color: $dot $bg
+    scrollbar-width: thin
+    border-right: 1px solid $dot
+
+    ::scrollbar
+        width: 15px
+        height: 15px
+
+    ::scrollbar-track-piece
+        background-color: #C2D2E4
+
+    ::scrollbar-thumb:vertical
+        height: 30px
+        background-color: #0A4C95
+
+    h2
+        margin-top: 0
+        font-size: 1.5rem
+        font-weight: 500
+
+    *
+        user-select: none

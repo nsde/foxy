@@ -1,0 +1,34 @@
+section.sidebar {
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100vh;
+  background: rgba(52, 53, 56, 0.3647058824);
+  overflow-y: auto;
+  scrollbar-color: rgba(255, 255, 255, 0.1568627451) #19191b;
+  scrollbar-width: thin;
+  border-right: 1px solid rgba(255, 255, 255, 0.1568627451);
+}
+section.sidebar ::scrollbar {
+  width: 15px;
+  height: 15px;
+}
+section.sidebar ::scrollbar-track-piece {
+  background-color: #C2D2E4;
+}
+section.sidebar ::scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: #0A4C95;
+}
+section.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+section.sidebar * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=sidebar.css.map */

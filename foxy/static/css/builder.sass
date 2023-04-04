@@ -1,0 +1,14 @@
+@import '_vars'
+
+$dot-size: 1px
+$dot-space: 30px
+
+main.builder
+    background: linear-gradient(90deg, $bg ($dot-space - $dot-size), transparent 1%) center, linear-gradient($bg ($dot-space - $dot-size), transparent 1%) center, $dot
+    background-size: $dot-space $dot-space
+    height: 100vh
+    width: 100vw
+
+section.workspace
+    margin-left: 400px
+    padding: 2rem
