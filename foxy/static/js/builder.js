@@ -1,30 +1,35 @@
-const bricks = document.querySelectorAll('.brick');
-
-bricks.forEach((brick) => {
-    
-});
-
-// Remove brick on Delete key pressed
+// Color brick red on Delete key pressed
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Delete') {
         const brick = document.querySelector('.brick:hover');
         if (brick) {
             brick.classList.add('remove');
-            saveProject();
+            brick.style.cursor = 'not-allowed';
         }
     }
-
 });
 
+// Remove brick on Delete key released
 document.addEventListener('keyup', (event) => {
     if (event.key === 'Delete') {
         // remove every brick with class remove
         const bricks = document.querySelectorAll('.brick.remove');
         bricks.forEach((brick) => {
             brick.remove();
-            saveProject();
         });
+        saveProject();
     }
+});
+
+
+// Save project on every keyup, but only after 500ms of inactivity
+let timeout = null;
+document.addEventListener('keyup', function (e) {
+    clearTimeout(timeout);
+
+    timeout = setTimeout(function () {
+        saveProject();
+    }, 1000);
 });
 
 'use strict';

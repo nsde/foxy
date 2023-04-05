@@ -2,12 +2,12 @@ BRICK_CATEGORIES = [
     {
         'name': 'Functions',
         'color': 'blue',
-        'bricks': ['Ask for <query>', 'Respond with <response>']
+        'bricks': ['Complete with GPT-3 and save response to <var>']
     },
     {
         'name': 'Controls',
         'color': 'yellow',
-        'bricks': ['If <condition>', 'Else', 'End If', 'While <condition>', 'End While', 'Repeat <times>', 'End Repeat']
+        'bricks': ['Show value of <var>', 'Set <var> to <value>']
     },
     {
         'name': 'Data',
@@ -15,11 +15,11 @@ BRICK_CATEGORIES = [
         'bricks': ['Run JavaScript <code>', 'Run Python <code>']
     },
     {
-        'name': 'Tools',
+        'name': 'FoxGPT',
         'color': 'purple',
-        'bricks': ['Set engine to <engine>']
+        'bricks': ['Set engine to <engine>', 'Set prompt to <prompt>']
     }
-]
+] 
 
 for category in BRICK_CATEGORIES:
     category['bricks_html'] = []
